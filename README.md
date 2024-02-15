@@ -18,7 +18,7 @@ JobifyApp is a work-in-progress mobile application aimed at providing a user-fri
 
 To run JobifyApp locally on your machine, follow these steps:
 
-1. Clone this repository: `git clone <repository_url>`
+1. Clone this repository: `git clone https://github.com/Malikfasih/HireNowApp.git`
 2. Navigate to the project directory: `cd JobifyApp`
 3. Install dependencies: `npm install` or `yarn install`
 4. Run the application: `npm start` or `yarn start`
