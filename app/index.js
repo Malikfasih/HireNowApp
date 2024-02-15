@@ -1,0 +1,36 @@
+import { Stack } from "expo-router";
+import { ScrollView, SafeAreaView } from "react-native";
+import { COLORS, images, icons, SIZES } from "../constants";
+import {
+  Nearbyjobs,
+  Popularjobs,
+  ScreenHeaderBtn,
+  Welcome,
+} from "../components";
+
+const Home = () => {
+  return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => {
+            <ScreenHeaderBtn iconUrl={icons.menu} dimesion="60%" />;
+          },
+          headerRight: () => {
+            <ScreenHeaderBtn iconUrl={images.profile} dimesion="100%" />;
+          },
+          headerTitle: "",
+        }}
+      />
+      <ScrollView>
+        <Welcome />
+        <Popularjobs />
+        <Nearbyjobs />
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+export default Home;
