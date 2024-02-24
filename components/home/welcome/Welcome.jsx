@@ -13,9 +13,11 @@ import styles from "./welcome.style";
 import { useRouter } from "expo-router";
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
+
+  console.log("search job:", searchTerm);
 
   return (
     <View>
@@ -29,11 +31,12 @@ const Welcome = () => {
           <TextInput
             style={styles.searchInput}
             placeholder="What are you looking for?"
+            onChangeText={(text) => setSearchTerm(text)}
           />
         </View>
       </View>
 
-      <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+      <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
         <Image
           source={icons.search}
           resizeMode="contain"
