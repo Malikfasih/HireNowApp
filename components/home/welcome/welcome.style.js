@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: SIZES.large,
     height: 50,
+    marginBottom: SIZES.small,
   },
   searchWrapper: {
     flex: 1,
@@ -40,8 +41,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.medium,
   },
   searchBtn: {
-    width: 50,
-    height: "100%",
+    width: "100%",
+    height: 50,
     backgroundColor: COLORS.tertiary,
     borderRadius: SIZES.medium,
     justifyContent: "center",
