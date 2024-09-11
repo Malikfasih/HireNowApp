@@ -25,7 +25,6 @@ const tabs = ["About", "Qualifications", "Responsibilities"];
 const JobDetails = () => {
   const params = useLocalSearchParams();
   const router = useRouter();
-  console.log("params:", params.id);
 
   const { data, isLoading, error, refetch } = useFetch("job-details", {
     job_id: params.id,
@@ -92,9 +91,7 @@ const JobDetails = () => {
       <>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          refreshControl={
-            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-          }
+          refreshControl={<RefreshControl refreshing={refreshing} />}
         >
           {isLoading ? (
             <ActivityIndicator size="large" color={COLORS.primary} />
